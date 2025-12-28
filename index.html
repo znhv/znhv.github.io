@@ -1,95 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="data:image/png;base64,">
-<script src="./likely.js"></script>
-<link rel="stylesheet" href="./likely.css">
-<title>Борис Женихов</title>
-<style>
-	body{
-		margin: 1em auto;
-		max-width: 640px;
-		padding:0 .62em;
-		font: 1.0em/1.62 sans-serif;
-	}
-	h1,h2,h3 {
-		line-height: 40px;
-		margin-block-start: auto;
-		margin-block-end: auto;
-		font-size: 26px;
-	}
-	h4, p {
-		font-size: inherit;
-		line-height:1.2;
-		margin-block-start: 8px;
-		margin-block-end: auto;
-	}
-	ul {
-		margin-block-start: auto;
-		margin-block-end: 16px;
-	}
-	.footer-tel a:link {
-		color: #000;
-		border-bottom: none;
-		font-size: 16px;
-		line-height: 22px;
-	}
-	.footer-mail a:link {
-		color: #000;
-		border-bottom-color: rgb(0, 0, 0, 0.2);
-		font-size: 16px;
-		line-height: 22px;
-	}
-	div {
-		height: 22px;
-	}
-	article {
-		margin-block-end: inherit;
-	}
-	a:link {
-		color: #0060a0;
-		text-decoration: none;
-		border-bottom: 1px solid rgba(0,96,160,0.15);
-		-webkit-transition: color .3s ease,border-color .3s ease;
-		transition: color .3s ease,border-color .3s ease;
-	}
-	a:link:hover, a:visited:hover {
-		color: #f41224;
-		border-color: rgba(244,18,36,.3);
-	}
-	@media print{
-		body{
-			max-width:none
-		}
-	}
-	@media (prefers-color-scheme: dark){
-		h1,h2,h3,h4 {
-		color: #fff;
-		}
-		body {color:rgb( 192, 192, 192 );background:rgb( 32, 32, 32 )}
-		a:link {color:#0080d4; border-bottom: 1px solid rgba(0,128,212,0.25)}
-		a:hover, a:visited:hover {color:#cef}
-		a:visited {color:#c9f}
-		.footer-tel a:link {color: #c0c0c0;}
-		.footer-mail a:link {color: #c0c0c0;border-bottom-color: rgb(160 160 160 / 15%);}
-		a:link:hover, a:visited:hover {color: #f41224;border-color: rgba(244,18,36,.3);}
-	}
-</style>
-<article>
-	<header>
-		<h1>Борис Женихов</h1>
-		<p>DevOps-инженер, автоматизирую процессы и помогаю проектам с открытым исходным кодом.</p>
-		<p>
-			<a href="http://github.com/znhv">Гитхаб</a> · <a href="https://t.me/catblaster">Телеграм</a> · <a href="">Резюме</a>
-		</p>
-	</header>
-</article>
-<div class="footer-tel">
-	<a  href="tel:89250882283">+7 925 088-22-83</a>
-</div>
-<div class="footer-mail">
-	<a href="mailto:znhv@yandex.com">znhv@yandex.com</a>
-</div>
 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="data:image/png;base64,">
+	<script src="./likely.js"></script>
+	<link rel="stylesheet" href="./likely.css">
+	<link rel="stylesheet" href="./style.css">
+	<title>Борис Женихов</title>
+</head>
 
+<body>
+	<article>
+		<header>
+			<h1>Boris Zhenikhov</h1>
+			<p>DevOps engineer, automating processes and helping open source projects.</p>
+			<p>
+				<a href="http://github.com/znhv">GitHub</a> · <a href="https://t.me/catblaster">Telegram</a> · <a
+					href="">Resume</a>
+			</p>
+		</header>
+		<section>
+			<h3>Projects</h3>
+			<a href="/projects/drive-manager">Simple and easy-to-use Drive manager for Docs & Sheets</a>
+		</section>
+	</article>
+	<div class="footer-mail">
+		<a href="mailto:znhv@yandex.com">znhv@yandex.com</a>
+	</div>
+</body>
+
+</html>
