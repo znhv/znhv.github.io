@@ -4,17 +4,23 @@ body{
 	padding:0 .62em;
 	font: 1.0em/1.62 sans-serif;
 }
-h1,h2 {
+h1 {
 	line-height: 40px;
 	margin-block-start: auto;
 	margin-block-end: auto;
 	font-size: 26px;
 }
-h3 {
-	font-size: 20px;
+h2 {
+	font-size: 22px;
 	margin-block-start: 16px;
 	margin-block-end: auto;
-	line-height: 24px;
+	line-height: 26px;
+}
+h3 {
+	font-size: 18px;
+	margin-block-start: 16px;
+	margin-block-end: auto;
+	line-height: 22px;
 }
 h4, p {
 	font-size: inherit;
