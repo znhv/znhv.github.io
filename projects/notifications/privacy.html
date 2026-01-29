@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="./likely.js"></script>
+    <link rel="stylesheet" href="./likely.css">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Privacy Policy — Notifications for Google Forms</title>
+</head>
+
+<body>
+    <h1>Privacy Policy</h1>
+
+    <p><strong>Updated:</strong> January 29, 2026</p>
+
+    <p>This Privacy Policy describes how the Notifications add-on for Google Forms handles your information.
+    </p>
+
+    <h2>1. Data Collection</h2>
+    <p>The Notifications add-on collects and stores the following information:</p>
+    <ul>
+        <li><strong>User Email:</strong> Your email address is collected to create a unique user identifier and authenticate with our backend.</li>
+        <li><strong>Notification Configurations:</strong> Your notification settings and rules (such as trigger conditions, recipient emails, and notification preferences) are stored on our backend server to enable the notification functionality across sessions.</li>
+        <li><strong>Form Response Triggers:</strong> The add-on detects when new responses are submitted to your forms to trigger notifications, but does not store the actual form response content.</li>
+    </ul>
+    <p>Notifications are sent through your Gmail account using the gmail.send scope. We do not collect or store the actual content of your Google Forms responses or notification emails.</p>
+
+    <h2>2. Data Access</h2>
+    <p>Notifications requires the following Google OAuth scopes:</p>
+    <ul>
+        <li><code>https://www.googleapis.com/auth/forms.currentonly</code> – to access the current Google Form and detect new responses that trigger notifications.</li>
+        <li><code>https://www.googleapis.com/auth/gmail.send</code> – to send notification emails through your Gmail account when form responses are received.</li>
+        <li><code>https://www.googleapis.com/auth/script.container.ui</code> – to render the user interface inside Google Forms.</li>
+        <li><code>https://www.googleapis.com/auth/script.external_request</code> – to communicate with our backend servers for storing and retrieving notification configurations.</li>
+        <li><code>https://www.googleapis.com/auth/script.scriptapp</code> – to enable core Apps Script functionality required for the add-on to operate.</li>
+        <li><code>https://www.googleapis.com/auth/userinfo.email</code> – to identify your account and associate notification configurations with your user profile.</li>
+    </ul>
+    <p>These scopes are used exclusively to enable notification features. The add-on does not access or read the actual content of form responses beyond what is necessary to trigger notifications.</p>
+
+    <h2>3. Data Storage</h2>
+    <p>User data is stored securely on our backend servers:</p>
+    <ul>
+        <li>Your email address is used to create a unique user ID that is linked to your notification configurations.</li>
+        <li>Notification configurations are stored securely in our database.</li>
+        <li>Authentication is performed using OpenID Connect tokens to ensure secure communication between the add-on and our backend servers.</li>
+        <li>The add-on uses the script.external_request scope to communicate with our backend API for storing and retrieving your configurations.</li>
+    </ul>
+    <p>We implement industry-standard security measures to protect your data from unauthorized access. Form response content and notification emails are not stored on our servers.</p>
+
+    <h2>4. Data Sharing</h2>
+    <p>Notifications does <strong>not sell or share</strong> your personal information or notification configurations with third parties, except as required to provide the service (such as sending notification emails) or as required by law.</p>
+
+    <h2>5. Use of Google User Data</h2>
+    <p>The add-on's use of information received from Google APIs will adhere to the <a
+            href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data
+            Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>6. Data Retention</h2>
+    <p>Your notification configurations are retained as long as you continue to use the service. You may request deletion of your data at any time by contacting us.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>This Privacy Policy may be updated from time to time. Any material changes will be reflected on this page with an
+        updated effective date.</p>
+
+    <h2>8. Contact</h2>
+    <p>If you have any questions regarding this Privacy Policy or the Notifications add-on, please contact us at <a
+            href="mailto:znhv@yandex.com">znhv@yandex.com</a>.</p>
+</body>
+</html>
