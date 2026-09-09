@@ -4,9 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="../favicon.png">
-	<script src="../likely.js"></script>
-	<link rel="stylesheet" href="./likely.css">
+	<meta name="description"
+		content="Grafium is a native, read-only iPhone client for Grafana dashboards and alerts. Free, no accounts, no tracking.">
 	<link rel="stylesheet" href="../style.css">
 	<title>Grafium — iOS client for Grafana</title>
 </head>
@@ -16,45 +15,73 @@
 		<header>
 			<img src="./logo.svg" alt="Grafium" width="64" height="64">
 			<h1>Grafium</h1>
-			<p>iOS client for Grafana.</p>
+			<p>A native, read-only iPhone client for Grafana® dashboards and alerts.</p>
 		</header>
 
 		<section>
 			<p>
-				Grafium is a simple, focused iOS app for checking your Grafana dashboards on the go.
-				Connect your own Grafana instances, keep an eye on key panels and alerts, and jump between servers
-				whenever you need to — all from your iPhone.
+				Grafium connects to the Grafana servers you already run and shows your dashboards and alerts on
+				your iPhone. Panels are drawn natively — there is no embedded web view and no server-side image
+				rendering, so a dashboard opens as an iOS screen rather than a page zoomed to fit.
 			</p>
 			<p>
-				Whether you’re on the way home, in a meeting, or away from your laptop, Grafium helps you quickly see
-				what’s going on with your services without digging through a browser.
+				The app reads. It never writes to your Grafana: no edits, no saves, no silences, no annotations.
 			</p>
 		</section>
 
 		<section>
-			<h3>What you can do with Grafium</h3>
+			<h3>What you can do</h3>
 			<ul>
-				<li>View your Grafana dashboards from a clean, mobile-friendly interface</li>
-				<li>Open individual panels to inspect important metrics in more detail</li>
-				<li>Keep key panels in Favorites for quick access</li>
-				<li>Switch between multiple Grafana servers and environments</li>
-				<li>Optionally upgrade to Grafium Pro for unlimited servers, favorites, and early access to new features
-				</li>
+				<li>Browse folders and dashboards, and search across them</li>
+				<li>Open any panel full screen and scrub through its values</li>
+				<li>Pin the dashboards and folders you check often; recently opened ones stay to hand</li>
+				<li>See firing and pending alert rules, with their instances and labels</li>
+				<li>Keep several servers side by side and switch between them</li>
+				<li>Connect with an API token, username and password, LDAP, JWT, an auth proxy, SSO, or anonymously</li>
 			</ul>
 		</section>
 
 		<section>
+			<h3>Try it without a server</h3>
 			<p>
-				<button class="btn" onclick="window.open('https://apps.apple.com', '_blank')">
-					Download on the App Store
-				</button>
+				Tap <em>Try Demo</em> on the first screen. Grafium connects anonymously to
+				<a href="https://play.grafana.org">play.grafana.org</a>, the public demo server run by Grafana Labs,
+				so you can see real dashboards and live alerts before entering anything of your own.
 			</p>
+		</section>
+
+		<section>
+			<h3>Privacy and price</h3>
+			<p>
+				Grafium is free. There are no subscriptions, no in-app purchases and no ads. It has no backend of
+				its own: requests go straight from your iPhone to your Grafana server. Credentials are held in the
+				iOS Keychain and can be revealed only behind Face ID. Nothing is tracked, logged or sent anywhere
+				else — see the <a href="/grafium/privacy">Privacy Policy</a>.
+			</p>
+		</section>
+
+		<section>
+			<h3>Requirements</h3>
+			<p>iPhone running iOS 26 or later, and a Grafana 9 or newer server you can already reach.</p>
+		</section>
+
+		<section>
+			<!-- Replace with the App Store product URL once the app is approved:
+			     <p><a class="btn" href="https://apps.apple.com/app/id6757076319">Download on the App Store</a></p> -->
+			<p><strong>Coming to the App Store.</strong></p>
 		</section>
 	</article>
 
+	<div class="footer-legal">
+		<p>
+			Grafana® is a trademark of Raintank, Inc. dba Grafana Labs. Grafium is not affiliated with, endorsed or
+			sponsored by Grafana Labs.
+		</p>
+	</div>
+
 	<div class="footer-mail">
 		<a href="/grafium/privacy">Privacy Policy</a> ·
-		<a href="/grafium/terms">Terms of Service</a> ·
+		<a href="/grafium/terms">Terms of Use</a> ·
 		<a href="mailto:grafium_help@icloud.com">grafium_help@icloud.com</a>
 	</div>
 </body>

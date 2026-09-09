@@ -4,9 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <script src="../likely.js"></script>
-    <link rel="stylesheet" href="../likely.css">
+    <meta name="description" content="Privacy Policy for Grafium, a read-only iPhone client for Grafana.">
     <link rel="stylesheet" href="../style.css">
     <title>Privacy Policy — Grafium</title>
 </head>
@@ -14,79 +12,134 @@
 <body>
     <h1>Privacy Policy</h1>
 
-    <p><strong>Updated:</strong> December 30, 2025</p>
+    <p><strong>Effective:</strong> September 9, 2026</p>
 
     <p>
-        This Privacy Policy describes how the Grafium mobile application ("Grafium", "the App") for iOS handles user
-        data and server information.
+        This Privacy Policy explains how the Grafium application for iPhone (“Grafium”, “the App”) handles
+        information. It is written by the App’s sole developer, who operates no servers and receives no data from
+        the App.
     </p>
 
-    <h2>1. Overview</h2>
+    <h2>1. Summary</h2>
     <p>
-        Grafium is an independent mobile client that allows you to connect to and view your own Grafana dashboards.
-        The App does <strong>not collect, store, or sell</strong> any personal information.
+        <strong>Grafium collects no data.</strong> It has no accounts, no backend, no analytics, no advertising and
+        no third-party SDKs of any kind. Everything you enter stays on your iPhone, and every request the App makes
+        goes directly from your device to a server you chose. This corresponds to the
+        <em>Data Not Collected</em> declaration on the App Store product page.
     </p>
 
-    <h2>2. Data the App Accesses</h2>
-    <p>
-        Grafium only accesses the information that <strong>you explicitly provide</strong> inside the App:
-    </p>
+    <h2>2. What Grafium stores on your device</h2>
+    <p>All of the following is written only to your iPhone, inside the App’s own storage:</p>
     <ul>
-        <li>Grafana server URL</li>
-        <li>Optional: local display name for the server</li>
+        <li><strong>Connection details</strong> — the address of each Grafana server you add and the name you give
+            it.</li>
+        <li><strong>Credentials</strong> — the API token, password, or JWT you enter is stored in the
+            <strong>iOS Keychain</strong>, never in a file, a log or the App’s settings. Revealing a saved
+            credential in the interface requires Face ID, Touch ID, or your device passcode.</li>
+        <li><strong>Session cookie</strong> — if you sign in through your organisation’s SSO page, the resulting
+            Grafana session cookie is kept the same way, for that server only.</li>
+        <li><strong>Preferences</strong> — which dashboards you pinned, which you opened recently, and per-dashboard
+            settings such as the time range, all in the App’s own preferences.</li>
+        <li><strong>A cache of dashboard structure</strong> — the layout returned by your server, so a dashboard you
+            revisit opens without waiting. It holds no credentials.</li>
     </ul>
     <p>
-        This information is stored <strong>locally on your device only</strong>. It is never transmitted to our servers
-        because Grafium <strong>does not have a backend server</strong>.
+        None of this is transmitted anywhere, because there is nowhere for it to go: Grafium has no server of its
+        own and the developer has no access to your device.
     </p>
 
-    <h2>3. Data Collection & Storage</h2>
-    <p>
-        Grafium does <strong>not</strong>:
-    </p>
+    <h2>3. What leaves your device, and where it goes</h2>
+    <p>Grafium makes network requests in exactly four situations:</p>
     <ul>
-        <li>collect or store user personal data</li>
-        <li>save Grafana credentials or API keys on external servers</li>
-        <li>upload analytics or telemetry</li>
-        <li>log requests or server addresses remotely</li>
+        <li><strong>To your own Grafana servers.</strong> Read-only API requests, carrying the credential you
+            configured for that server. This traffic is between you and infrastructure you control; it does not pass
+            through the developer.</li>
+        <li><strong>To Grafana Labs’ public demo server</strong> (<code>play.grafana.org</code>), and only if you
+            tap <em>Try Demo</em>. The connection is anonymous and carries no credential.</li>
+        <li><strong>To a news feed</strong>, and only when a dashboard you open contains a Grafana “news” panel. The
+            App fetches the address that panel specifies — by default
+            <code>grafana.com/blog/news.xml</code> — using a separate session that sends no credential and accepts
+            no cookies.</li>
+        <li><strong>To images and links your dashboards reference.</strong> A text panel may embed an image or a
+            link; the image is fetched without a credential, and tapping a link opens it in Safari, outside the
+            App.</li>
     </ul>
     <p>
-        All dashboard requests are sent <strong>directly between your device and your Grafana instance</strong>.
+        Requests made on your behalf reach the operators of those servers, who apply their own privacy practices.
+        For <code>play.grafana.org</code> and the default news feed that is
+        <a href="https://grafana.com/legal/privacy-policy/">Grafana Labs</a>.
     </p>
 
-    <h2>4. Subscription & Payments</h2>
+    <h2>4. What Grafium does not do</h2>
+    <ul>
+        <li>No analytics, telemetry, crash reporting or usage statistics.</li>
+        <li>No tracking, no advertising identifiers, no data brokers. Nothing is shared with anyone for any purpose.
+        </li>
+        <li>No third-party SDKs — the App is built entirely on Apple’s own frameworks.</li>
+        <li>No account, no sign-up, no email address required.</li>
+        <li>No writes to your Grafana. The App issues read requests only.</li>
+    </ul>
+
+    <h2>5. Retention and deletion</h2>
     <p>
-        Grafium Pro is offered as a paid auto-renewable subscription. All payments and billing are processed
-        <strong>exclusively by Apple via the App Store</strong>. Grafium does not store payment information.
+        Because nothing is collected, there is nothing held remotely to retain or delete. On your device, data lives
+        as long as you keep it:
     </p>
+    <ul>
+        <li>Deleting a server in <em>Settings</em> removes its details and erases its credential from the Keychain.
+        </li>
+        <li><em>Settings ▸ Clear Cache</em> discards the stored dashboard structure.</li>
+        <li>Deleting the App removes everything it stored, including Keychain items.</li>
+    </ul>
+
+    <h2>6. Security</h2>
     <p>
-        Users may manage subscriptions or cancel anytime in their Apple ID subscription settings.
+        Credentials are held in the iOS Keychain, which is encrypted by the system and protected by your device
+        passcode; revealing one in the interface requires biometric or passcode authentication. Connections use
+        HTTPS with the system’s standard certificate validation. Grafium is only ever as private as the servers you
+        point it at — how your Grafana instance handles its data is governed by whoever operates it.
     </p>
 
-    <h2>5. Data Sharing</h2>
+    <h2>7. Children</h2>
     <p>
-        Grafium does <strong>not share</strong> any user information, Grafana server URLs, or dashboard data with
-        third parties.
+        Grafium is a tool for people who administer or monitor computer systems. It is not directed to children,
+        and because it collects no data it collects none from children.
     </p>
 
-    <h2>6. Children’s Privacy</h2>
+    <h2>8. Your rights</h2>
     <p>
-        Grafium is not intended for use by individuals under the age of 13. We do not knowingly collect personal data
-        from children.
+        Privacy laws such as the GDPR, the UK GDPR and the CCPA give you rights to access, correct, export or delete
+        personal data a company holds about you, and to know whether it is sold or shared. Grafium holds no personal
+        data about you, sells nothing and shares nothing, so there is no record for such a request to reach. Your
+        data stays under your control on your own device. You are welcome to write with any question about this at
+        the address below.
     </p>
 
-    <h2>7. Changes to This Policy</h2>
+    <h2>9. Changes to this policy</h2>
     <p>
-        This Privacy Policy may be updated occasionally. Any revisions will be posted on this page with an updated
-        effective date.
+        This policy may be updated as the App changes. Revisions are posted on this page with a new effective date;
+        the date above always reflects the current version.
     </p>
 
-    <h2>8. Contact</h2>
+    <h2>10. Contact</h2>
     <p>
-        If you have any questions regarding this Privacy Policy or the App, please contact us at:
+        Questions about this policy or about the App:
         <br>
         <a href="mailto:grafium_help@icloud.com">grafium_help@icloud.com</a>
     </p>
+
+    <div class="footer-legal">
+        <p>
+            Grafana® is a trademark of Raintank, Inc. dba Grafana Labs. Grafium is not affiliated with, endorsed or
+            sponsored by Grafana Labs.
+        </p>
+    </div>
+
+    <div class="footer-mail">
+        <a href="/grafium">Grafium</a> ·
+        <a href="/grafium/terms">Terms of Use</a> ·
+        <a href="mailto:grafium_help@icloud.com">grafium_help@icloud.com</a>
+    </div>
 </body>
 
 </html>
