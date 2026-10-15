@@ -55,7 +55,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.025em; line-height:
 	width: calc(var(--w) * 0.269); height: calc(var(--w) * 0.0788); border-radius: 999px; background: #000;
 }
 .phone > img.over {
-	position: absolute; z-index: 1; aspect-ratio: auto; border-radius: 0;
+	position: absolute; z-index: 1; aspect-ratio: auto; border-radius: 0; max-width: none;
 	filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 1px rgba(255, 255, 255, 0.3));
 }
 
@@ -80,20 +80,15 @@ h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.025em; line-height:
 .hero .lede { font-size: clamp(18px, 2vw, 21px); color: var(--ink-2); max-width: 32em; margin: 24px auto 0; line-height: 1.45; }
 .badge { display: inline-block; line-height: 0; margin-top: 36px; }
 .badge img { height: 52px; width: auto; }
-.stage { position: relative; display: flex; justify-content: center; margin-top: 72px; height: 600px; }
+.stage { position: relative; display: flex; justify-content: center; align-items: flex-start; margin-top: 72px; height: 600px; }
 .stage .phone { --w: 360px; }
-.stage .push {
-	position: absolute; z-index: 1; left: 50%; top: 70px; width: 480px; transform: translateX(-50%);
-	filter: drop-shadow(0 26px 40px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 1px rgba(255, 255, 255, 0.3));
-	animation: arrive 0.9s cubic-bezier(0.2, 0.9, 0.25, 1.15) 0.4s both;
-}
-@keyframes arrive { from { opacity: 0; transform: translate(-50%, -30px) scale(0.96); } to { opacity: 1; transform: translate(-50%, 0) scale(1); } }
+.stage .push { animation: arrive 0.9s cubic-bezier(0.2, 0.9, 0.25, 1.15) 0.4s both; }
+@keyframes arrive { from { opacity: 0; transform: translateY(-26px) scale(0.97); } to { opacity: 1; transform: none; } }
 .stage::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 180px; background: linear-gradient(transparent, var(--bg)); }
 @media (max-width: 560px) {
 	.hero { padding-top: 56px; }
 	.stage { height: 470px; margin-top: 52px; }
-	.stage .phone { --w: 280px; }
-	.stage .push { width: 340px; top: 54px; }
+	.stage .phone { --w: 260px; }
 }
 
 /* ── Sections ───────────────────────────────────────────── */
