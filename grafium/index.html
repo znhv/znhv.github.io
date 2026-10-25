@@ -13,10 +13,10 @@
 	<meta property="og:url" content="https://znhv.dev/grafium/">
 	<meta property="og:title" content="Grafium — Grafana® dashboards & alerts, native on iPhone">
 	<meta property="og:description" content="Every panel drawn natively, read-only and private. Push alerts and widgets with Grafium Pro.">
-	<meta property="og:image" content="https://znhv.dev/grafium/img/og.png">
+	<meta property="og:image" content="https://znhv.dev/grafium/img/og.png?v=2">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
-	<meta property="og:image:alt" content="Grafium on iPhone: a Time Sensitive HighErrorRate alert over the Lock Screen">
+	<meta property="og:image:alt" content="Grafium on iPhone: a Time Sensitive HighErrorRate alert on the Lock Screen">
 	<meta name="twitter:card" content="summary_large_image">
 	<link rel="icon" type="image/png" sizes="32x32" href="/grafium/img/favicon-32.png">
 	<link rel="icon" type="image/png" sizes="64x64" href="/grafium/img/favicon-64.png">
@@ -48,7 +48,7 @@
 				"offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
 				"author": { "@type": "Person", "name": "Boris Zhenikhov", "url": "https://znhv.dev/" }
 			},
-			{"@type": "FAQPage", "@id": "https://znhv.dev/grafium/#faq", "mainEntity": [{"@type": "Question", "name": "Is there a Grafana app for iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Grafium is an independent, native iPhone app for Grafana dashboards and alerts, for iOS 26 or later. It connects to the Grafana servers you already run and draws every panel with native iOS charts instead of a web view. It is not made by Grafana Labs."}}, {"@type": "Question", "name": "Does Grafium work with self-hosted Grafana?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, that is what it is built for. Grafium works with Grafana 9 or later that your iPhone can reach over HTTPS with a trusted certificate. Self-signed certificates are not supported."}}, {"@type": "Question", "name": "Can I get Grafana alerts as push notifications on iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with Grafium Pro. A firing alert arrives as a Time Sensitive notification, and when it resolves the same notification quietly updates. Push notifications need Grafana 12 or later; the app can set up the Grafium contact point on your server for you."}}, {"@type": "Question", "name": "Are there Grafana widgets for the iPhone Home Screen?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with Grafium Pro: a panel’s value or chart and your firing alerts on the Home Screen, the Lock Screen and in StandBy, plus a Grafium Alerts button in Control Center. Widgets refresh about every 15–60 minutes, as iOS allows, and show when they were last updated."}}, {"@type": "Question", "name": "Which panel types does Grafium show?", "acceptedAnswer": {"@type": "Answer", "text": "22 of Grafana’s 25 built-in visualizations, including time series, stat, gauge, bar gauge, bar chart, table, heatmap, logs, state timeline, status history, pie chart, geomap and text. A panel type it can’t draw shows its raw data instead."}}, {"@type": "Question", "name": "Will Grafium change anything on my Grafana server?", "acceptedAnswer": {"@type": "Answer", "text": "No. Grafium only reads: it never edits dashboards, panels or alert rules. The one change it can make is the one you ask for in Grafium Pro: creating, updating or removing its own contact point."}}, {"@type": "Question", "name": "How do I sign in to my Grafana?", "acceptedAnswer": {"@type": "Answer", "text": "With an API or service account token, a username and password, LDAP, JWT, an auth proxy, your organization’s SSO page, or anonymously. Credentials are stored in the iOS Keychain. To look around first, tap Try Demo: it opens live dashboards on Grafana Labs’ public demo server."}}, {"@type": "Question", "name": "Is my data private?", "acceptedAnswer": {"@type": "Answer", "text": "The free app has no backend, no account, no analytics and no tracking: requests go straight from your iPhone to your Grafana. Grafium Pro’s push relay stores only push tokens, a random channel ID and your subscription status, and never receives your server’s address, credentials, dashboards or metrics."}}, {"@type": "Question", "name": "How much does Grafium cost?", "acceptedAnswer": {"@type": "Answer", "text": "Grafium is free. Grafium Pro, with instant alerts and widgets, is $3.99 a month with a 1-week free trial or $29.99 a year with a 2-week free trial (US prices)."}}]}
+			{"@type": "FAQPage", "@id": "https://znhv.dev/grafium/#faq", "mainEntity": [{"@type": "Question", "name": "Is there a Grafana app for iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Grafium is an independent, native iPhone app for Grafana dashboards and alerts, for iOS 26 or later. It connects to the Grafana servers you already run and draws every panel with native iOS charts instead of a web view. It is not made by Grafana Labs."}}, {"@type": "Question", "name": "Does Grafium work with self-hosted Grafana?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, that is what it is built for. Grafium works with Grafana 9 or later that your iPhone can reach over HTTPS with a trusted certificate. Self-signed certificates are not supported."}}, {"@type": "Question", "name": "Can I get Grafana alerts as push notifications on iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with Grafium Pro. A firing alert arrives as a Time Sensitive notification, and when it resolves the same notification quietly updates. Push notifications need Grafana 12 or later; the app can set up the Grafium contact point on your server for you."}}, {"@type": "Question", "name": "Are there Grafana widgets for the iPhone Home Screen?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with Grafium Pro: a panel’s value or chart and your firing alerts on the Home Screen, the Lock Screen and in StandBy, plus a Grafium Alerts button in Control Center. Widgets refresh about every 15–60 minutes, as iOS allows, and show when they were last updated."}}, {"@type": "Question", "name": "Which panel types does Grafium show?", "acceptedAnswer": {"@type": "Answer", "text": "22 of the 25 built-in Grafana visualizations, including time series, stat, gauge, bar gauge, bar chart, table, heatmap, logs, state timeline, status history, pie chart, geomap and text. A panel type it can’t draw shows its raw data instead."}}, {"@type": "Question", "name": "Will Grafium change anything on my Grafana server?", "acceptedAnswer": {"@type": "Answer", "text": "No. Grafium only reads: it never edits dashboards, panels or alert rules. The one change it can make is the one you ask for in Grafium Pro: creating, updating or removing its own contact point."}}, {"@type": "Question", "name": "How do I sign in to my Grafana?", "acceptedAnswer": {"@type": "Answer", "text": "With an API or service account token, a username and password, LDAP, JWT, an auth proxy, your organization’s SSO page, or anonymously. Credentials are stored in the iOS Keychain. To look around first, tap Try Demo: it opens live dashboards on Grafana Labs’ public demo server."}}, {"@type": "Question", "name": "Is my data private?", "acceptedAnswer": {"@type": "Answer", "text": "The free app has no backend, no account, no analytics and no tracking: requests go straight from your iPhone to your Grafana. Grafium Pro’s push relay stores only push tokens, a random channel ID and your subscription status, and never receives your server’s address, credentials, dashboards or metrics."}}, {"@type": "Question", "name": "How much does Grafium cost?", "acceptedAnswer": {"@type": "Answer", "text": "Grafium is free. Grafium Pro, with instant alerts and widgets, is $3.99 a month with a 1-week free trial or $29.99 a year with a 2-week free trial (US prices)."}}]}
 		]
 	}
 	</script>
@@ -76,7 +76,7 @@
 			<a class="badge" href="https://apps.apple.com/app/id6757076319"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="156" height="52"></a>
 		</div>
 		<div class="stage">
-			<div class="phone"><img src="/grafium/img/dashboard.webp" alt="Grafium showing the Production Overview dashboard: requests, error rate and p99 latency" width="660" height="1434" fetchpriority="high"><img class="over push" src="/grafium/img/push.webp" alt="Time Sensitive notification: HighErrorRate, checkout-api 3.7% of requests fail (SLO 2%)" width="900" height="167" style="left: -18.5%; top: 6.98%; width: 137.0%"></div>
+			<div class="phone"><img src="/grafium/img/dashboard.webp" alt="Grafium showing the Production Overview dashboard: requests by service, requests, error rate and p99 latency" width="660" height="1434" fetchpriority="high"><img class="over push" src="/grafium/img/push.webp" alt="Time Sensitive notification: HighErrorRate, checkout-api 3.7% of requests fail (SLO 2%)" width="900" height="167" style="left: -18.5%; top: 6.98%; width: 137.0%"></div>
 		</div>
 	</section>
 
@@ -85,7 +85,7 @@
 			<div class="head">
 				<span class="eyebrow">The free app</span>
 				<h2>Everything on your dashboards. Nothing in a web view.</h2>
-				<p>Grafium draws 22 of Grafana’s 25 visualizations with native iOS charts, keeping the colors, units and thresholds from your dashboard.</p>
+				<p>Grafium draws 22 of the 25 built-in Grafana visualizations with native iOS charts, keeping the colors, units and thresholds from your dashboard.</p>
 			</div>
 			<div class="trio">
 				<figure>
@@ -94,9 +94,9 @@
 					<p>Open a chart full screen and drag across it to read the time and value under your finger.</p>
 				</figure>
 				<figure>
-					<div class="phone"><img src="/grafium/img/alerts.webp" alt="Firing alerts on Production EU and Production US: Kafka consumer lag, disk filling up, p99 latency, error rate" width="660" height="1434" loading="lazy"></div>
+					<div class="phone"><img src="/grafium/img/alerts.webp" alt="Firing alerts with Platform and Production labels: Kafka consumer lag, disk filling up, p99 latency, error rate, an expiring certificate" width="660" height="1434" loading="lazy"></div>
 					<h3>See what’s firing</h3>
-					<p>Firing and pending rules first, grouped by server, one tap from the panel behind them.</p>
+					<p>Firing and pending rules first, filtered by server, folder or group. New alerts stay marked until you open them.</p>
 				</figure>
 				<figure>
 					<div class="phone"><img src="/grafium/img/signin.webp" alt="Add Server form with the authentication type menu open" width="660" height="1434" loading="lazy"><img class="over" src="/grafium/img/auth-menu.webp" alt="Authentication types: API Token, Username, LDAP, JWT, Auth proxy, None, SSO" width="600" height="753" loading="lazy" style="left: 32%; top: 33.2%; width: 67%"></div>
@@ -118,7 +118,7 @@
 				<article class="card">
 					<span class="eyebrow">Instant alerts</span>
 					<h3>A push the moment an alert fires</h3>
-					<p>Firing alerts arrive as Time Sensitive notifications. When an alert resolves, the same notification quietly updates. Works with Grafana 12 or later.</p>
+					<p>Firing alerts arrive as Time Sensitive notifications. When an alert resolves, the same notification quietly updates. Works with Grafana 12 or later. The app can set up the contact point and send a test alert.</p>
 					<div class="shot bottom">
 						<div class="phone"><img src="/grafium/img/lock.webp" alt="iPhone Lock Screen" width="660" height="1434" loading="lazy"><img class="over" src="/grafium/img/stack.webp" alt="Grafium notifications: HighErrorRate, APILatencyP99High and 7 more" width="900" height="313" loading="lazy" style="left: -2.1%; top: 69%; width: 104.2%"></div>
 					</div>
@@ -126,7 +126,7 @@
 				<article class="card">
 					<span class="eyebrow">Widgets</span>
 					<h3>Your numbers at a glance</h3>
-					<p>A panel’s value or chart and your firing alerts on the Home Screen, the Lock Screen and in StandBy.</p>
+					<p>A panel’s value or chart and your firing alerts on the Home Screen, the Lock Screen and in StandBy, plus an Alerts button in Control Center.</p>
 					<div class="shot top">
 						<div class="phone"><img src="/grafium/img/home.webp" alt="Home Screen with Grafium widgets: Requests 10.1K req/s, p99 latency 1.20 s, Firing 5" width="660" height="1434" loading="lazy"></div>
 					</div>
@@ -147,7 +147,7 @@
 			<details><summary>Does Grafium work with self-hosted Grafana?</summary><p>Yes, that is what it is built for. Grafium works with Grafana 9 or later that your iPhone can reach over HTTPS with a trusted certificate. Self-signed certificates are not supported.</p></details>
 			<details><summary>Can I get Grafana alerts as push notifications on iPhone?</summary><p>Yes, with Grafium Pro. A firing alert arrives as a Time Sensitive notification, and when it resolves the same notification quietly updates. Push notifications need Grafana 12 or later; the app can set up the Grafium contact point on your server for you.</p></details>
 			<details><summary>Are there Grafana widgets for the iPhone Home Screen?</summary><p>Yes, with Grafium Pro: a panel’s value or chart and your firing alerts on the Home Screen, the Lock Screen and in StandBy, plus a Grafium Alerts button in Control Center. Widgets refresh about every 15–60 minutes, as iOS allows, and show when they were last updated.</p></details>
-			<details><summary>Which panel types does Grafium show?</summary><p>22 of Grafana’s 25 built-in visualizations, including time series, stat, gauge, bar gauge, bar chart, table, heatmap, logs, state timeline, status history, pie chart, geomap and text. A panel type it can’t draw shows its raw data instead.</p></details>
+			<details><summary>Which panel types does Grafium show?</summary><p>22 of the 25 built-in Grafana visualizations, including time series, stat, gauge, bar gauge, bar chart, table, heatmap, logs, state timeline, status history, pie chart, geomap and text. A panel type it can’t draw shows its raw data instead.</p></details>
 			<details><summary>Will Grafium change anything on my Grafana server?</summary><p>No. Grafium only reads: it never edits dashboards, panels or alert rules. The one change it can make is the one you ask for in Grafium Pro: creating, updating or removing its own contact point.</p></details>
 			<details><summary>How do I sign in to my Grafana?</summary><p>With an API or service account token, a username and password, LDAP, JWT, an auth proxy, your organization’s SSO page, or anonymously. Credentials are stored in the iOS Keychain. To look around first, tap Try Demo: it opens live dashboards on Grafana Labs’ public demo server.</p></details>
 			<details><summary>Is my data private?</summary><p>The free app has no backend, no account, no analytics and no tracking: requests go straight from your iPhone to your Grafana. Grafium Pro’s push relay stores only push tokens, a random channel ID and your subscription status, and never receives your server’s address, credentials, dashboards or metrics.</p></details>
