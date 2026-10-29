@@ -45,10 +45,10 @@
 	<div class="narrow">
 		<span class="eyebrow">Legal</span>
 		<h1>Privacy Policy</h1>
-		<p class="meta">Effective October 15, 2026 · replaces the version of September 9, 2026</p>
+		<p class="meta">Effective October 29, 2026 · replaces the version of October 15, 2026</p>
 
 		<div class="summary">
-			<p><strong>In short.</strong> The free app has no account, no analytics, no tracking and no backend: it talks only to the Grafana® servers you add. Grafium Pro’s push notifications go through a small relay run by the developer. The relay stores push tokens, a random channel ID and your subscription status — never your server’s address, your credentials, your dashboards or your metrics.</p>
+			<p><strong>In short.</strong> Grafium has no account, no tracking and no advertising. It talks to the Grafana® servers you add, and sends the developer anonymous usage data and error reports — which features are used and what fails, never your server’s address, credentials, dashboard names, queries or values — which you can turn off in Settings. Grafium Pro’s push notifications go through a small relay run by the developer. The relay stores push tokens, a random channel ID and your subscription status — never your server’s address, your credentials, your dashboards or your metrics.</p>
 		</div>
 
 		<ol class="toc">
@@ -57,13 +57,14 @@
 			<li><a href="#network">3. What leaves your iPhone</a></li>
 			<li><a href="#push">4. Grafium Pro and push notifications</a></li>
 			<li><a href="#widgets">5. Grafium Pro widgets</a></li>
-			<li><a href="#not">6. What Grafium does not do</a></li>
-			<li><a href="#retention">7. Retention and deletion</a></li>
-			<li><a href="#security">8. Security</a></li>
-			<li><a href="#rights">9. Your rights</a></li>
-			<li><a href="#children">10. Children</a></li>
-			<li><a href="#changes">11. Changes</a></li>
-			<li><a href="#contact">12. Contact</a></li>
+			<li><a href="#usage">6. Usage data and diagnostics</a></li>
+			<li><a href="#not">7. What Grafium does not do</a></li>
+			<li><a href="#retention">8. Retention and deletion</a></li>
+			<li><a href="#security">9. Security</a></li>
+			<li><a href="#rights">10. Your rights</a></li>
+			<li><a href="#children">11. Children</a></li>
+			<li><a href="#changes">12. Changes</a></li>
+			<li><a href="#contact">13. Contact</a></li>
 		</ol>
 
 		<h2 id="who">1. Who we are</h2>
@@ -80,12 +81,13 @@
 		</ul>
 
 		<h2 id="network">3. What leaves your iPhone</h2>
-		<p>The free app makes network requests in these situations only:</p>
+		<p>The App makes network requests in these situations only:</p>
 		<ul>
 			<li><strong>To your own Grafana servers.</strong> Read requests carrying the credential you configured for that server. This traffic goes directly between your iPhone and infrastructure you control.</li>
 			<li><strong>To Grafana Labs’ public demo server</strong> (<code>play.grafana.org</code>), only if you tap <em>Try Demo</em>. The connection is anonymous.</li>
 			<li><strong>To a news feed</strong>, only when a dashboard you open contains a Grafana “news” panel. The App fetches the address that panel specifies (by default <code>grafana.com/blog/news.xml</code>) without any credential or cookie.</li>
 			<li><strong>To images and links your dashboards reference.</strong> Images are fetched without a credential; links open in Safari, outside the App.</li>
+			<li><strong>To PostHog and Sentry</strong>, with anonymous usage data and error reports, unless you turn this off — see <a href="#usage">section 6</a>.</li>
 		</ul>
 		<p>If you use Grafium Pro, two more parties are involved: <strong>Apple</strong>, which processes your subscription and delivers notifications, and the <strong>Grafium relay</strong> described in the next section. The servers you reach apply their own privacy practices; for <code>play.grafana.org</code> and the default news feed that is <a href="https://grafana.com/legal/privacy-policy/">Grafana Labs</a>.</p>
 
@@ -113,36 +115,56 @@
 		<h2 id="widgets">5. Grafium Pro widgets</h2>
 		<p>Widgets and the Control Center button ask your Grafana server directly, the same way the App does; nothing passes through the relay. To show something while the App is closed, they keep on your device, in storage shared only by Grafium and its widgets: the list of your servers (names and addresses, without passwords or tokens), the dashboard filters you last picked, and the last value or alert list each widget showed, with its time. Your Grafana credentials stay in the device Keychain; widgets can read them after you first unlock the device following a restart, and they never leave the device.</p>
 
-		<h2 id="not">6. What Grafium does not do</h2>
+		<h2 id="usage">6. Usage data and diagnostics</h2>
+		<p>Grafium sends anonymous data about how the App is used and where it fails, so the developer can fix crashes and decide what to build next. It is on by default; turn it off at any time in <em>Settings ▸ Privacy ▸ Share Anonymous Usage Data</em>. Turning it off stops sending at once and deletes anything not yet sent.</p>
+		<h3>What is sent</h3>
 		<ul>
-			<li>No analytics, telemetry, crash reporting or usage statistics.</li>
+			<li>which screens and features you use — for example, that a dashboard was opened from search or that the time range was changed;</li>
+			<li>for each dashboard you open, how many panels of each type and data source type drew, came back empty, failed or are not supported, and the kind of each failure;</li>
+			<li>settings in your dashboards that Grafium does not support yet, by their type name;</li>
+			<li>crashes, freezes and errors, with the App version, iOS version and device model;</li>
+			<li>the major and minor version of Grafana and the sign-in type of the server in use.</li>
+		</ul>
+		<p>Counts and durations are rounded into ranges.</p>
+		<h3>What is never sent</h3>
+		<p>Your server addresses; dashboard, panel, folder and alert names; queries; metric values; series and label names; what you type into search; error messages from your server; and your credentials.</p>
+		<h3>Report Panel</h3>
+		<p>When you report a panel, Grafium sends your message, the panel’s type and data source types, the names of the settings it uses and the shape of its data (column types and row counts) — not their values. A picture of the panel is attached only if you switch on <em>Attach Screenshot</em>; it shows the panel’s title and values.</p>
+		<h3>Identifier</h3>
+		<p>Events carry a random identifier created on your device. It is not linked to your Apple Account, name or email, and turning the setting off and on again replaces it. IP addresses are not stored.</p>
+		<h3>Processors</h3>
+		<p>PostHog, Inc. receives usage data, hosted in the European Union. Functional Software, Inc. (Sentry) receives errors, crashes and panel reports, hosted in the United States. Neither uses the data for advertising or tracking.</p>
+
+		<h2 id="not">7. What Grafium does not do</h2>
+		<ul>
 			<li>No tracking, no advertising identifiers, no data brokers. Nothing is sold or shared for advertising.</li>
-			<li>No third-party SDKs — the App is built on Apple’s own frameworks.</li>
+			<li>No third-party SDKs other than PostHog and Sentry for the anonymous data in <a href="#usage">section 6</a>; everything else is built on Apple’s own frameworks.</li>
 			<li>No account, no sign-up and no email address required.</li>
 			<li>No changes to your Grafana, with one exception you start yourself: with Grafium Pro, choosing <em>Automatic</em> as a server’s contact point creates, updates or removes the Grafium contact point on that server.</li>
 		</ul>
 
-		<h2 id="retention">7. Retention and deletion</h2>
+		<h2 id="retention">8. Retention and deletion</h2>
 		<ul>
 			<li>A device token is deleted from the relay when Apple reports it invalid, or when you turn off <em>Alerts</em> for a server on that device.</li>
 			<li>A channel is deleted when you delete the server in Grafium.</li>
 			<li>Subscription records stay while the subscription exists.</li>
+			<li>Usage data and error reports are kept for as long as PostHog’s and Sentry’s plans retain them, then deleted.</li>
 			<li>On your iPhone, deleting a server removes its details and erases its credential from the Keychain; <em>Settings ▸ Clear Cache</em> discards the stored dashboard structure; deleting the App removes everything it stored, including Keychain items. Removing a widget or a server stops widget reads.</li>
 		</ul>
 
-		<h2 id="security">8. Security</h2>
+		<h2 id="security">9. Security</h2>
 		<p>Credentials are held in the iOS Keychain, encrypted by the system and protected by your device passcode. Connections use HTTPS with the system’s standard certificate validation. Alerts reach the relay only when signed with your channel’s secret. Grafium is only as private as the servers you point it at: how your Grafana instance handles its data is up to whoever operates it.</p>
 
-		<h2 id="rights">9. Your rights</h2>
-		<p>Laws such as the GDPR, the UK GDPR and the CCPA give you rights to access, correct, export or delete personal data a company holds about you, and to know whether it is sold or shared. The free app holds nothing about you outside your device. For Grafium Pro, the relay holds only the pseudonymous records described above, with no name or email attached; the quickest way to delete them is to turn off <em>Alerts</em> or delete the server in the App. You can also write to the address below, and we will help as far as we can identify your records. Nothing is sold or shared.</p>
+		<h2 id="rights">10. Your rights</h2>
+		<p>Laws such as the GDPR, the UK GDPR and the CCPA give you rights to access, correct, export or delete personal data a company holds about you, and to know whether it is sold or shared. Outside your device, the developer holds only the anonymous usage data and error reports in <a href="#usage">section 6</a>, tied to a random identifier rather than to you. For Grafium Pro, the relay holds only the pseudonymous records described above, with no name or email attached; the quickest way to delete them is to turn off <em>Alerts</em> or delete the server in the App. You can also write to the address below, and we will help as far as we can identify your records. Nothing is sold or shared.</p>
 
-		<h2 id="children">10. Children</h2>
+		<h2 id="children">11. Children</h2>
 		<p>Grafium is a tool for people who run or monitor computer systems. It is not directed to children and does not knowingly collect data from them.</p>
 
-		<h2 id="changes">11. Changes</h2>
+		<h2 id="changes">12. Changes</h2>
 		<p>This policy may change as the App changes. Revisions are posted on this page with a new effective date.</p>
 
-		<h2 id="contact">12. Contact</h2>
+		<h2 id="contact">13. Contact</h2>
 		<p>Questions about this policy or the App: <a href="mailto:grafium_help@icloud.com">grafium_help@icloud.com</a></p>
 	</div>
 </main>
